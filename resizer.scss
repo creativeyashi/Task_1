@@ -1,0 +1,136 @@
+body {
+	padding-top: 40px;
+}
+.thumbnail {
+	.hero-unit {
+		margin-bottom: 0;
+	}
+}
+.project-row {
+	& > div {
+		padding: 10px;
+	}
+}
+.fadeable {
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.faded {
+	opacity: 0;
+}
+#dropzone {
+	position: relative;
+	img {
+		width: 100%;
+	}
+}
+#dropzone-image-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.drop-hover {
+	.thumbnail {
+		background-color: yellow;
+	}
+}
+#selection {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.selection-cover {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.3);
+	&.north {
+		top: 0;
+		.border-element {
+			&.vertical {
+				bottom: 0;
+			}
+			&.horizontal {
+				bottom: 0;
+			}
+		}
+	}
+	&.south {
+		bottom: 0;
+		.border-element {
+			&.vertical {
+				top: 0;
+			}
+			&.horizontal {
+				top: 0;
+			}
+		}
+	}
+	&.east {
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+	&.west {
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+#selection-inner {
+	cursor: move;
+	position: absolute;
+}
+#selection-white {
+	border: 2px solid white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+#selection-black {
+	border: 2px dotted black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+#selection-corner {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 5px;
+	height: 5px;
+	cursor: nwse-resize;
+	z-index: 3;
+}
+.border-element {
+	position: absolute;
+	background-color: white;
+	&.vertical {
+		width: 1px;
+		height: 30px;
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+	}
+	&.horizontal {
+		width: 30px;
+		height: 1px;
+		&.left {
+			left: -30px;
+		}
+		&.right {
+			right: -30px;
+		}
+	}
+}
