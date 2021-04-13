@@ -3,4 +3,4 @@ Enable the uploading of images (via file input button or drag and drop) and enab
 
 
 # Installation Guide
-clone the repository and run index.html in your favorite web browser.
+clone the repository and run index.html in your favourite web browser.
